@@ -39,3 +39,10 @@ document.getElementById('deposit-button').addEventListener('click', function () 
         updateBalance(amount, true);
     }
 });
+
+// handle withdraw...
+document.getElementById('withdraw-button').addEventListener('click', function () {
+    const amount = getInputValue('withdraw-input');
+    const balance = getInnerTextValue('balance-total');
+    
+})
