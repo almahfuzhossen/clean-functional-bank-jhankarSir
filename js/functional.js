@@ -31,3 +31,11 @@ function updateBalance(amount, isAdding) {
     }
     document.getElementById('balance-total').innerText = newBalance;
 }
+
+document.getElementById('deposit-button').addEventListener('click', function () {
+    const amount = getInputValue('deposit-input');
+    if (amount > 0) {
+        updateTotal('deposit-total', amount);
+        updateBalance(amount, true);
+    }
+});
