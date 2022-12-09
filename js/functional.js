@@ -44,5 +44,8 @@ document.getElementById('deposit-button').addEventListener('click', function () 
 document.getElementById('withdraw-button').addEventListener('click', function () {
     const amount = getInputValue('withdraw-input');
     const balance = getInnerTextValue('balance-total');
-    
+    if (amount > 0 && amount <= balance) {
+        updateTotal('withdraw-total', amount);
+        updateBalance(amount, false)
+    }
 })
