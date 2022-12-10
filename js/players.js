@@ -18,3 +18,12 @@ function addPlayer() {
     setPlayerStyle(player);
     playersContainer.appendChild(player);
 }
+
+document.getElementById('players').addEventListener('click', function (event) {
+    if (event.target.tagName.toLowerCase() == 'div') {
+        event.target.style.backgroundColor = 'yellow';
+    }
+    else {
+        event.target.parentNode.style.backgroundColor = 'yellow';
+    }
+})
