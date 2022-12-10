@@ -6,3 +6,15 @@ for (const player of players) {
     player.style.margin = '10px';
     player.style.padding = '10px';
 }
+
+function addPlayer() {
+    const playersContainer = document.getElementById('players');
+    const player = document.createElement('div');
+    player.classList.add('player');
+    player.innerHTML = `
+    <h4 class="player-name">New Player</h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, alias repellat fuga neque iure ipsa quaerat et ut praesentium repudiandae, ullam omnis debitis quasi vero deserunt aliquam, ab perspiciatis est!</p>
+    `;
+    setPlayerStyle(player);
+    playersContainer.appendChild(player);
+}
